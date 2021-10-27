@@ -10,6 +10,14 @@ const items = [
     'img/04.jpg',
     'img/05.jpg'
 ];
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+];
+
 const imageBig = document.querySelector('.image-big');
 let incremento = 0;
 for(let i = 0; i < items.length; i++){

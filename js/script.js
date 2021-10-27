@@ -18,13 +18,17 @@ for(let i = 0; i < items.length; i++){
     el.className = 'items';
     
     if(i === incremento){
-        items.classList.add('active')
+        el.classList.add('active')
     }
-
-    items.innerHTML = `<img src="${images[i]}" alt="">`;
+    imageBig.append(el);
+    el.innerHTML = `<img src="${items[i]}" alt="">`;
+    const lato = document.createElement('div');
+    lato.className = 'item2';
+    
+    
 }
 //
-const items = document.getElementsByClassName('items');
+const itemsNew = document.getElementsByClassName('items');
 const item2 = document.getElementsByClassName('item2');
 
 
@@ -45,22 +49,22 @@ console.log('incremento lista', items[incremento]);
 
 btnSu.addEventListener('click',function(){
     
-    items[incremento].classList.remove('active');
+    itemsNew[incremento].classList.remove('active');
     item2[incremento].classList.remove('evidence');
     incremento--;
     if(incremento < 0) incremento = items.length - 1;
     console.log(incremento);
-    items[incremento].classList.add('active');
+    itemsNew[incremento].classList.add('active');
     item2[incremento].classList.add('evidence');
 });
 btnGiu.addEventListener('click',function(){
     item2[incremento].classList.remove('overlay');
     item2[incremento].classList.remove('evidence');
-    items[incremento].classList.remove('active');
+    itemsNew[incremento].classList.remove('active');
     incremento++;
     if(incremento > items.length - 1) incremento = 0;
     console.log(incremento);
-    items[incremento].classList.add('active');
+    itemsNew[incremento].classList.add('active');
     item2[incremento].classList.add('evidence');
 });
 

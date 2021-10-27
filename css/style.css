@@ -11,6 +11,7 @@
    align-items: center;  
 }
 .slider{
+    display: flex;
     width: 70%;
     height: 400px;
     background-color: red;
@@ -20,7 +21,42 @@
     height: 100%;
     background-color: aqua;
 }
-.image-big img{
+.items{
     width: 100%;
     height: 100%;
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.image-mini{
+    position: relative;
+    width: 20%;
+    background-color: blue;
+}
+
+.active{
+    display: block;
+}
+.freccia-su, .freccia-giu{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(167, 142, 142);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.freccia-su{
+    top: 10px;
+}
+.freccia-giu{
+    bottom: 10px;
+}
+.item2{
+    height: 20%;
 }

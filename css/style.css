@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;  
+}
+.slider{
+    width: 70%;
+    height: 400px;
+    background-color: red;
+}
+.image-big{
+    width: 80%;
+    height: 100%;
+    background-color: aqua;
+}
+.image-big img{
+    width: 100%;
+    height: 100%;
+}

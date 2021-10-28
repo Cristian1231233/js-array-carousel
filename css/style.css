@@ -59,6 +59,7 @@ img{
     background-color: rgb(167, 142, 142);
     border-radius: 50%;
     cursor: pointer;
+    z-index: 999;
 }
 .freccia-su{
     top: 10px;
@@ -70,12 +71,7 @@ img{
     position: relative;
     height: 20%;
 }
-.item2 .overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(22, 18, 18, .5);
-}
+
 .evidence{
     border: 2px solid rgb(214, 202, 202);
 }

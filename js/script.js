@@ -18,20 +18,39 @@ const title = [
     'Paradise'
 ];
 
+
+const text = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+]
+
 const imageBig = document.querySelector('.image-big');
+const imageMini = document.querySelector('.image-mini');
+
 let incremento = 0;
 for(let i = 0; i < items.length; i++){
     console.log(items[i]);
     const el = document.createElement('div');
     el.className = 'items';
-    
-    if(i === incremento){
-        el.classList.add('active')
-    }
-    imageBig.append(el);
     el.innerHTML = `<img src="${items[i]}" alt="">`;
-    const lato = document.createElement('div');
-    lato.className = 'item2';
+    
+    
+    imageBig.append(el);
+    
+
+    const imagineLaterale = document.createElement('div');
+    imagineLaterale.className = 'item2';
+    imagineLaterale.innerHTML = `<img src="${items[i]}" alt="">`;
+    imageMini.append(imagineLaterale);
+
+   
+    if(i === incremento){
+        el.classList.add('active');
+        imagineLaterale.classList.add('evidence');
+    }
     
     
 }
